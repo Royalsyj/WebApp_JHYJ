@@ -12,3 +12,6 @@ We will need a few pages:
 3. Promotions
 4. Checkout page (need to click 'OK' to confirm)
 5. Order confirmed page
+
+
+Making some changes here, let's see if it comes out
