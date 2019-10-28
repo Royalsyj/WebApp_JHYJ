@@ -1,0 +1,132 @@
+body {
+    background-color: #e6dde4;
+    background-image: url('background3.jpg');
+    background-size: cover;
+}
+
+.wrapper {
+    margin: 0 50px 0 50px;
+}
+
+#cart {
+    padding-top: 10px;
+    padding-right: 10px;
+
+}
+
+.tablenav{
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    table-layout: auto;
+    text-align: center;
+    float: right;
+    margin-top: 20px;
+}
+
+#navigation {
+    min-width: 1400px;
+}
+
+#navbar {
+    width: 450px;
+    height: 80px;
+}
+
+.tablenav td {
+    padding: 5px 5px;
+    font-family: cursive;
+    font-size: large;
+    color: #683e06;
+    border-radius: 25px;
+}
+
+.tablenav a {
+    text-decoration: none;
+    font-family: cursive;
+    font-size: large;
+    color: #683e06;
+}
+
+.mid {
+    min-width: 1200px;
+    padding: 0 100px 0 100px;
+    background-color: #e6dde4b7;
+    border: 2px solid #683e06;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 125%;
+    margin:auto;
+    height: 800px;
+    position: relative;
+}
+
+footer {    
+    height: 80px;
+    min-width: 1500px;
+    margin: auto;
+    position: relative;
+}
+
+hr {
+    border-color: #683e06;
+    border-width: 1.5px;
+}
+
+#tm {
+    text-align: center;
+    font-size: 140%;
+    color: #683e06;
+}
+
+#links {
+    float: right;
+    padding-right: 50px;
+    font-family: cursive;
+    font-size: 110%;
+}
+
+#links a {
+    text-decoration-color: #683e06;
+    color: #683e06;
+}
+
+.dropmenu {
+    overflow: hidden;
+}
+
+.tablenav tr:nth-of-type(even) td:hover, .dropmenu:hover .dropbtn {
+    background-color: #d4bc9ad8;
+}
+
+
+.dropcontent {
+    display: none;
+    position: absolute;
+    background-color: #e6dde4b7;
+    min-width: 120px;
+    box-shadow: 0px 3px 3px #683e06;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.dropcontent a {
+    float: none;
+    color: #683e06;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropcontent a:hover {
+    background-color: #d4bc9ab7;
+    border-radius: 15px;
+}
+
+.dropmenu:hover .dropcontent {
+    display: block;
+}
+
+#logo:hover, #cart:hover {
+    opacity: 0.7;
+}

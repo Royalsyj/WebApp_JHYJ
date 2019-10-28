@@ -1,0 +1,70 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.10deb1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Oct 27, 2019 at 12:26 AM
+-- Server version: 5.5.44-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.11
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `f31ee`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE IF NOT EXISTS `orders` (
+  `orderID` int(40) NOT NULL AUTO_INCREMENT,
+  `amount` double NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `delivery` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`orderID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`orderID`, `amount`, `timestamp`, `delivery`) VALUES
+(1, 25, '2019-10-22 15:23:46', '0000-00-00 00:00:00'),
+(2, 25, '2019-10-22 15:24:54', '0000-00-00 00:00:00'),
+(3, 25, '2019-10-24 16:00:24', '0000-00-00 00:00:00'),
+(4, 65, '2019-10-24 16:22:37', '0000-00-00 00:00:00'),
+(5, 90, '2019-10-24 16:24:24', '0000-00-00 00:00:00'),
+(6, 416, '2019-10-24 16:31:26', '0000-00-00 00:00:00'),
+(7, 191, '2019-10-24 16:32:28', '0000-00-00 00:00:00'),
+(8, 345, '2019-10-24 16:33:33', '0000-00-00 00:00:00'),
+(9, 142, '2019-10-24 16:34:19', '0000-00-00 00:00:00'),
+(10, 30, '2019-10-24 16:45:40', '0000-00-00 00:00:00'),
+(11, 60, '2019-10-24 16:46:50', '0000-00-00 00:00:00'),
+(12, 25, '2019-10-24 16:52:09', '0000-00-00 00:00:00'),
+(13, 53, '2019-10-25 09:03:04', '0000-00-00 00:00:00'),
+(14, 50, '2019-10-25 16:26:42', '0000-00-00 00:00:00'),
+(15, 100, '2019-10-25 16:26:59', '0000-00-00 00:00:00'),
+(16, 50, '2019-10-26 07:08:58', '0000-00-00 00:00:00'),
+(17, 25, '2019-10-26 07:16:27', '0000-00-00 00:00:00'),
+(18, 25, '2019-10-26 07:17:31', '0000-00-00 00:00:00'),
+(19, 50, '2019-10-26 07:17:46', '0000-00-00 00:00:00'),
+(20, 50, '2019-10-26 07:54:18', '0000-00-00 00:00:00'),
+(21, 25, '2019-10-26 08:11:55', '0000-00-00 00:00:00'),
+(22, 25, '2019-10-26 08:13:11', '0000-00-00 00:00:00'),
+(23, 25, '2019-10-26 08:15:14', '0000-00-00 00:00:00'),
+(24, 50, '2019-10-26 16:13:08', '0000-00-00 00:00:00'),
+(25, 25, '2019-10-26 16:25:37', '0000-00-00 00:00:00');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

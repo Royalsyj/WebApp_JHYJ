@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>JHYJCakes</title>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="JHYJCSS.css">
+        <style>
+            .slides:hover{
+                opacity: 0.7;
+            }
+
+            #desc {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                color: #683e06;
+            }
+
+            #desc p {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                padding: 20px 20px;
+                text-align:center;
+                font-size: 130%;
+                color: #683e06;
+            }
+
+            .slideshow {
+                margin: auto;
+                text-align:center;
+            }
+            .slides {
+                display: none;
+                margin: auto;
+                margin-bottom: 20px;
+                box-shadow: 8px 8px 8px #683e06;
+            }
+
+            .leftbtn, .rightbtn {
+                width: 50px;
+                height: 50px;
+                font-size: 120%;
+            }
+
+        </style>
+    </head>
+    <body onload="auto()">
+    <script>
+        var index=0;
+
+        function btnClicked(n) {
+            var r = slide(index+=n);
+        }
+
+        function slide(n) {
+            var c;
+            var x = document.getElementsByClassName("slides");
+            for(c=0; c<x.length; c++) {
+                x[c].style.display = "none";
+            }
+            if(n<1){
+                index=x.length;
+            } else if(n>x.length) {
+                index=1;
+            } else {
+                index=n;
+            }
+            x[index-1].style.display = "block";
+
+            return index;
+        }
+
+        function auto() {
+            var c;
+            var x = document.getElementsByClassName("slides");
+            for (c=0; c<x.length; c++) {
+                x[c].style.display = "none";
+            }
+            index++;
+            if(index > x.length) {
+                index = 1;
+            }
+            x[index-1].style.display = "block";
+            setTimeout(auto, 3000);
+        }
+    </script>
+    <div class="wrapper">
+        <div class="top">
+        <header>
+            <div id="navigation">
+                <a href="index.html">
+                    <img src="logo2.png" alt="Home" id="logo" style="width:300px;height:150px;border:0;">
+                </a>
+                <div class="tablenav">
+                    <table align="right" id="navbar">
+                        <tr>
+                            <td colspan="2"></td>
+                            <td align="right"><a href="cart.php" id="cart"><img src="cart.png" alt="Cart" style="width: 50px; height: 50px; border:0;"></a></td>
+                        </tr>
+                        <tr>
+                            <td><div class="dropmenu">
+                                <b>MENU</b>
+                                <div class="dropcontent">
+                                    <b><a href="classic.php">CLASSIC</a></b>
+                                    <b><a href="custom.php">CUSTOM</a></b>
+                                </div>
+                            </div></td>
+                            <td><b><a href="track.html">TRACK ORDER</a></b></td> &nbsp;
+                            <td><b><a href="about.html">ABOUT US</a></b></td> &nbsp;
+                        </tr>
+                    </table>
+                </div>              
+            </div>
+        </header>
+        </div>
+        <div class="mid">
+            <div id="desc">
+                <p>We sell a variety of cakes that are freshly baked every day. From classic pre-made cakes to customisable cakes, be sure to be spoilt for choices. View our menu now!</p>
+            </div>
+            <div class="slideshow">
+                <a href="classic.php#featured3"><img class="slides" src="logcake.jpg" alt="logcake" style="width:800px; height: 500px; display:block;"></a>
+                <a href="classic.php#featured1"><img class="slides" src="durian.jpg" alt="durian" style="width: 800px; height: 500px;"></a>
+                <a href="classic.php#featured2"><img class="slides" src="biscoff.jpg" alt="biscoff" style="width: 800px; height: 500px;"></a>
+                <button class="leftbtn" onclick="btnClicked(-1)">&#10094;</button>
+                <button class="rightbtn" onclick="btnClicked(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+        <div class="bot">
+        <footer>
+            <hr>
+            <br>
+            <div id="tm">
+                <small><i><b>Copyright &copy; 2019 JHYJCakes</b></i></small>
+            </div>
+            <div id="links"><b>
+                <a href="about.html#left">CONTACT US</a> &nbsp; &nbsp;
+                <a href=""></a>
+            </b></div>
+        </footer>
+        </div>
+    </body>
+</html>
+
+<!--https://www.istockphoto.com/sg/photos/chocolate-cake?sort=mostpopular&mediatype=photography&phrase=chocolate%20cake-->

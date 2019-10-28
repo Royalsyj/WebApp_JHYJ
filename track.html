@@ -1,0 +1,179 @@
+ <!doctype html>
+<html lang="en">
+    <head>
+        <title>JHYJCakes</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="JHYJCSS.css">
+        <style>
+            #desc {
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                    text-align:center;
+                    font-size: 200%;
+                    color: #683e06;
+                    border-bottom: 3px solid #683e06;
+                }
+
+            #track {
+                border-bottom: 2px solid #683e06;
+            }
+
+            legend {
+                margin: auto;
+                text-align: center;
+                font-size: 130%;
+                color:#683e06;
+            }
+
+            fieldset {
+                border: 2px solid #683e06;
+                text-align:center;
+                margin-top: 100px;
+            }
+
+            fieldset table {
+                margin: auto;
+                padding: 50px 50px;
+            }
+
+            fieldset td {
+                padding: 10px 10px;
+            }
+
+            input[type="text"] {
+                width: 250px;
+                height: 30px;
+                border: 2px solid #683e06;
+            }
+
+            input[type="submit"] {
+                width: 150px;
+                height: 30px;
+                font-size: 70%;
+            }
+
+            fieldset label {
+                font-size: 110%;
+                color:#683e06;
+            }
+
+            .mid {
+                height: 600px;
+            }
+
+            input[type="text"] {
+                border-radius: 5px;
+                font-size: 80%;
+            }
+
+            input[type="submit"] {
+                border-radius: 5px;
+            }
+
+            #btn:hover {
+                opacity: 0.7;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function validate() {
+                var input = document.getElementById("orderID").value;
+                var regexp = /^[0-9]{1,5}$/;
+
+                if(input.length > 0) {
+                    if(regexp.test(input) == false) {
+                        document.getElementById("tracktable").rows[0].cells[2].innerHTML = "<b>Please Enter Only Numbers!</b>";
+                        document.getElementById("tracktable").style.color = "#e0150e";
+                        document.getElementById("orderID").style.border = "2px solid #e0150e";
+                        if(document.getElementById("orderID").value.length > 5) {
+                            document.getElementById("tracktable").rows[0].cells[2].innerHTML = "<b>Please Enter Maximum 5 Characters!</b>";
+                        }
+                        document.getElementById("trackbtn").innerHTML = "<input type=\"submit\" value=\"Track Order Now!\" style=\"color:#683e06; border: 2px solid #e0150e;\" disabled>";
+                        document.getElementById("disable").innerHTML = "<b>Cannot Track. Errors not Resolved</b>";
+                        return false;
+                    } else {
+                        document.getElementById("tracktable").rows[0].cells[2].innerHTML = "<b>OK!</b>";
+                        document.getElementById("tracktable").style.color = "green";
+                        document.getElementById("orderID").style.border = "2px solid green";
+                        document.getElementById("trackbtn").innerHTML = "<input type=\"submit\" value=\"Track Order Now!\" style=\"color:#683e06; border: 2px solid green;\">";
+                        document.getElementById("disable").innerHTML = "<b>Track OK!</b>";
+                        return true;
+                    }
+                } else {
+                    document.getElementById("tracktable").rows[0].cells[2].innerHTML = "";
+                    document.getElementById("orderID").style.border = "2px solid #683e06";
+                    document.getElementById("trackbtn").innerHTML = "<input type=\"submit\" value=\"Track Order Now!\" style=\"color:#683e06;\">";
+                    document.getElementById("disable").innerHTML = "";
+                }
+            }
+        </script>
+        <div class="wrapper">
+                        <div class="top">
+                                <header>
+                                    <div id="navigation">
+                                        <a href="index.html">
+                                            <img src="logo2.png" id="logo" alt="Home" style="width:300px;height:150px;border:0;">
+                                        </a>
+                                        <div class="tablenav">
+                                            <table align="right" id="navbar">
+                                                <tr>
+                                                    <td colspan="2"></td>
+                                                    <td align="right"><a href="cart.php" id="cart"><img src="cart.png" alt="Cart" style="width: 50px; height: 50px; border:0;"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="dropmenu">
+                                                        <b>MENU</b>
+                                                        <div class="dropcontent">
+                                                            <b><a href="classic.php">CLASSIC</a></b>
+                                                            <b><a href="custom.php">CUSTOM</a></b>
+                                                        </div>
+                                                    </div></td>
+                                                    <td><b><a href="track.html" id="track">TRACK ORDER</a></b></td> &nbsp;
+                                                    <td><b><a href="about.html">ABOUT US</a></b></td> &nbsp;
+                                                </tr>
+                                            </table>
+                                        </div>              
+                                    </div>
+                                </header>
+                                </div>
+        <div class="mid">
+            <div id="desc">
+                <b><p>TRACK YOUR ORDER</p></b>
+            </div>
+            <div id="tracker">
+                <form action="trackorder.php" method="post">
+                    <fieldset>
+                        <legend><b>TRACK</b></legend>
+                        <table id="tracktable">
+                            <tr>
+                                <td><label for="track">Your Order Number: </label></td>
+                                <td><input type="text" name="orderID" id="orderID" oninput="validate()" required></td>
+                                <td style="font-size: 80%;"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td align="right" id="trackbtn"><input type="submit" value="Track Order Now!" id="btn" style="color:#683e06;"></td>
+                                <td id="disable" style="font-size: 80%;"></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        </div>
+        <div class="bot">
+        <footer>
+            <hr>
+            <br>
+            <div id="tm">
+                <small><i><b>Copyright &copy; 2019 JHYJCakes</b></i></small>
+            </div>
+            <div id="links"><b>
+                <a href="about.html#left">CONTACT US</a> &nbsp; &nbsp;
+                <a href=""></a>
+            </b></div>
+        </footer>
+        </div>
+    </body>
+</html>
