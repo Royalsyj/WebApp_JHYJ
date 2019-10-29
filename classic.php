@@ -187,10 +187,10 @@ if($result= mysqli_query($conn, $sql)){
                 <table border="0">
                     <tr>
                         <td>
-                            <a href="classic.html" style="color: #683e06;" id="classic"><b>CLASSIC MENU</b></a>
+                            <a href="classic.php" style="color: #683e06;" id="classic"><b>CLASSIC MENU</b></a>
                         </td>
                         <td>
-                            <a href="custom.html" id="custom">CUSTOM MENU</a>
+                            <a href="custom.php" id="custom">CUSTOM MENU</a>
                         </td>
                     </tr>
                 </table>
@@ -218,8 +218,8 @@ if($result= mysqli_query($conn, $sql)){
 					$cake_desc[] = "Crusty cheese cake with a generous topping of cream cheese, topped with berries.";
 					$cake_desc[] = "A flavourful durian cake made from Mao Shan Wang durians. Definitely irresistible for durian lovers!";
 					$cake_desc[] = "Love Biscoff? You will love this!";
-					$cake_desc[] = "Matchmade for matcha.";
-					$cake_desc[] = "";
+					$cake_desc[] = "A cake made from the finest of Japanese matcha.";
+					$cake_desc[] = "A great choice to excite the palette of chocolate enthusiast.";
 					$cake_desc[] = "";
 					$cake_desc[] = "Our Christmas Special!<br>A spongey chocolate cake topped with toffee cream, an absolutely brilliant choice for the festive season.";
 						for ($i=0; $i<count($menuID); $i++){
